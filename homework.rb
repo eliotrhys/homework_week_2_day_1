@@ -61,17 +61,12 @@ class Team
     @players << addition
   end
 
-  # def player_check(player)
-  #   for player in @players
-  #     # if player == @players
-  #     if @players.include?(player)
-  #       return true
-  #       break
-  #     else
-  #       return false
-  #     end
-  #   end
-  # end
+  def player_check(player)
+    for player in @players
+      return true if @players.include?(player)
+      return false if @players.!include?(player)
+    end
+  end
 
   def win_lose(result)
     if result == "Win"
@@ -83,35 +78,35 @@ class Team
 
 end
 
-class Library
-
-attr_accessor :books
-
-  def initialize(books)
-    @books = books
-  end
-
-  # def details
-  #   return @books
-  # end
-
-  # def book_info
-  #   for item in @books
-  #     if item[:title] == book_title
-  #       return item
-  #     end
-  #   end
-  end
-
-
-  #   def call_rental_details(book_title)
-  #     for item in @books
-  #       if item[:title] == book_title
-  #         return item[:rental_details]
-  #       end
-  #     end
-  #   end
-  # end
-
-
-end
+# class Library
+#
+# attr_accessor :books
+#
+#   def initialize(books)
+#     @books = books
+#   end
+#
+#   # def details
+#   #   return @books
+#   # end
+#
+#   # def book_info
+#   #   for item in @books
+#   #     if item[:title] == book_title
+#   #       return item
+#   #     end
+#   #   end
+#   end
+#
+#
+#   #   def call_rental_details(book_title)
+#   #     for item in @books
+#   #       if item[:title] == book_title
+#   #         return item[:rental_details]
+#   #       end
+#   #     end
+#   #   end
+#   # end
+#
+#
+# end
