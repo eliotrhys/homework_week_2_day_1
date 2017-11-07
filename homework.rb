@@ -109,8 +109,10 @@ attr_accessor :books
     end
   end
 
-  # def add_book(new_book)
-  #
-  # end
+  def add_book(new_book)
+    @books << new_book
+  end
+
+
 
 end
