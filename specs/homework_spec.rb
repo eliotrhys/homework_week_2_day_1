@@ -139,6 +139,9 @@ class TestLibrary < MiniTest::Test
     assert_equal(result, @books[2][:rental_details])
   end
 
-  
+  # def test_add_book
+  #   result = @library.add_book("the_BFG")
+  #   assert_equal = (result, @books.length)
+  # end
 
 end
