@@ -101,14 +101,13 @@ attr_accessor :books
   end
 
 
-  #   def call_rental_details(book_title)
-  #     for item in @books
-  #       if item[:title] == book_title
-  #         return item[:rental_details]
-  #       end
-  #     end
-  #   end
-  # end
+  def rental_info(new_book)
+    for book in @books
+      if book[:title] == new_book
+        return book[:rental_details]
+      end
+    end
+  end
 
 
 end

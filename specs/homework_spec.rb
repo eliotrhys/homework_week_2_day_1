@@ -134,9 +134,11 @@ class TestLibrary < MiniTest::Test
    assert_equal(result, @books[1])
   end
 
-#  # def test_call_rental_details
-#  #   result = @library.call_rental_details("lord_of_the_rings")
-#  #   assert_equal(result, @books[1][:rental_details])
-#  # end
-#
+  def test_rental_info
+    result = @library.rental_info("the_accidental_billionaires")
+    assert_equal(result, @books[2][:rental_details])
+  end
+
+  
+
 end
