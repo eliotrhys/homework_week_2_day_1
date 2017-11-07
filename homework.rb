@@ -62,9 +62,11 @@ class Team
   end
 
   def player_check(player)
-    for player in @players
-      return true if @players.include?(player)
-      return false if @players.!include?(player)
+    for person in @players
+      if @players.include?(player)
+        return true
+      end
+      return false
     end
   end
 
