@@ -80,35 +80,35 @@ class Team
 
 end
 
-# class Library
-#
-# attr_accessor :books
-#
-#   def initialize(books)
-#     @books = books
-#   end
-#
-#   # def details
-#   #   return @books
-#   # end
-#
-#   # def book_info
-#   #   for item in @books
-#   #     if item[:title] == book_title
-#   #       return item
-#   #     end
-#   #   end
-#   end
-#
-#
-#   #   def call_rental_details(book_title)
-#   #     for item in @books
-#   #       if item[:title] == book_title
-#   #         return item[:rental_details]
-#   #       end
-#   #     end
-#   #   end
-#   # end
-#
-#
-# end
+class Library
+
+attr_accessor :books
+
+  def initialize(books)
+    @books = books
+  end
+
+  def details
+    return @books
+  end
+
+  def book_info(new_book)
+    for book in @books
+      if book[:title] == new_book
+        return book
+      end
+    end
+  end
+
+
+  #   def call_rental_details(book_title)
+  #     for item in @books
+  #       if item[:title] == book_title
+  #         return item[:rental_details]
+  #       end
+  #     end
+  #   end
+  # end
+
+
+end

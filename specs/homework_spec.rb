@@ -93,50 +93,50 @@ class TestTeam < MiniTest::Test
 
 end
 
-# class TestLibrary < MiniTest::Test
-#
-#   def setup
-#
-#     @books = [
-#           {
-#           title: "lord_of_the_rings",
-#           rental_details: {
-#             student_name: "Jeff",
-#             date: "01/12/16"}
-#           },
-#           {
-#           title: "the_sun_also_rises",
-#           rental_details: {
-#             student_name: "Mark",
-#             date: "15/11/15"}
-#           },
-#           {
-#           title: "the_accidental_billionaires",
-#           rental_details: {
-#             student_name: "Dumbledore",
-#             date: "09/01/15"}
-#           }
-#         ]
-#
-#
-#         @library = Library.new(@books)
-#
-# 	end
-#
-#   #
-#   # def test_details
-#   #   result = @library.details
-#   #   assert_equal(result, @books)
-#   # end
-#
-#   # def test_book_info
-#   #  result = @library.book_info("the_sun_also_rises")
-#   #  assert_equal(result, @books[2])
-#   # end
-#
+class TestLibrary < MiniTest::Test
+
+  def setup
+
+    @books = [
+          {
+          title: "lord_of_the_rings",
+          rental_details: {
+            student_name: "Jeff",
+            date: "01/12/16"}
+          },
+          {
+          title: "the_sun_also_rises",
+          rental_details: {
+            student_name: "Mark",
+            date: "15/11/15"}
+          },
+          {
+          title: "the_accidental_billionaires",
+          rental_details: {
+            student_name: "Dumbledore",
+            date: "09/01/15"}
+          }
+        ]
+
+
+        @library = Library.new(@books)
+
+	end
+
+
+  def test_details
+    result = @library.details
+    assert_equal(result, @books)
+  end
+
+  def test_book_info
+   result = @library.book_info("the_sun_also_rises")
+   assert_equal(result, @books[1])
+  end
+
 #  # def test_call_rental_details
 #  #   result = @library.call_rental_details("lord_of_the_rings")
 #  #   assert_equal(result, @books[1][:rental_details])
 #  # end
 #
-# end
+end
